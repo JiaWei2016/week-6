@@ -15,7 +15,7 @@ console. For example, try running: clickNextButton() and see what it does. Use l
 ================================ */
 
 var state = {
-  "slideNumber": 0, // slideNumber keeps track of what slide you are on. It should increase when you
+  "slideNumber": 1, // slideNumber keeps track of what slide you are on. It should increase when you
                     // click the next button and decrease when you click the previous button. It
                     // should never get so large that it is bigger than the dataset. It should never
                     // get so small that it is smaller than 0.
@@ -42,11 +42,27 @@ var clickNextButton = function() {
 
 }
 
+
+  if (state.slideNumber < state.slideData.length){
+    state.slideNumber += 1;
+    console.log("slide" + " " + state.slideNumber)
+  }
+
+
+
 var clickPreviousButton = function() {
 
 }
+
+  if (state.slideNumber > 1){
+    state.slideNumber -= 1;
+    console.log("slide" + " " + state.slideNumber)
+  }
+
 
 var saySlideName = function(slide) {
   // saySlideName uses console.log to "say" the name of the slide it is given. It should run when
   // someone clicks on one of the buttons.
 }
+
+ console.log("This is" + " " + "slide"+ " " + state.slideNumber)

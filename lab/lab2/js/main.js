@@ -128,6 +128,13 @@ var featureGroup;
 
 var myStyle = function(feature) {
   return {};
+  switch (feature.properties.COLLDAY){
+    case 'MON': return {color: "#f6b834"};
+    case 'TUE': return {color: "#d7d187"};
+    case 'THU': return {color: "#82bcfc"};
+    case 'WED': return {color: "#fffcb4"};
+    case 'FRI': return {color: "#f45c20"};
+  }
 };
 
 var showResults = function() {
@@ -144,6 +151,16 @@ var showResults = function() {
 };
 
 
+
+ var myFilter = function(feature) {
+   if (feature.properties.COLLDAY === "0"){
+     return false;
+   }else {
+   return true;
+   }
+ };
+
+
 var eachFeatureFunction = function(layer) {
   layer.on('click', function (event) {
     /* =====================
@@ -151,14 +168,21 @@ var eachFeatureFunction = function(layer) {
     Check out layer.feature to see some useful data about the layer that
     you can use in your application.
     ===================== */
+    var day =layer.feature.properties.COLLDAY;
+        console.log(day);
+        switch (day){
+          case 'MON': return Monday;
+          case 'TUE': return Tuesday;
+          case 'THU': return Thusday;
+          case 'WED': return Wednesday;
+          case 'FRI': return Friday;
+        }
     console.log(layer.feature);
     showResults();
   });
 };
 
-var myFilter = function(feature) {
-  return true;
-};
+
 
 $(document).ready(function() {
   $.ajax(dataset).done(function(data) {

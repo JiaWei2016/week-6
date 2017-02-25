@@ -29,6 +29,15 @@ p.main {
 
 .legend {
   position: absolute;
+  right:0px;
+  top:0px;
+  width: 150px;
   background-color: #fff;
   z-index: 2000;
 }
+
+.label {
+   display: inline-block;
+   width: 24px;
+   height: 12px;
+ }
