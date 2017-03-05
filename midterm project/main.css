@@ -27,16 +27,37 @@ body {
 }
 
 h2{
-  font-size: 20px;
-  color: #f6b834
+  font-size: 25px;
+  color: #225db6
 }
 
-#button {
-  display: inline;
-  float:left;
-  padding: 8px 8px;
-  font-size: 0.9em;
+#next {
+    background-color: #1c9099;
+    border: none;
+    position: absolute;
+    left: 280px;
+    bottom: 400px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
+#previous{
+  background-color: #1c9099;
+  border: none;
+  position: absolute;
+  left: 150px;
+  bottom: 400px;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 
 #string-input{
    position: relative;
